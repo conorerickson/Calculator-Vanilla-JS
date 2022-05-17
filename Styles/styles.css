@@ -1,0 +1,56 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+  font-weight: normal;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+body{
+  padding: 50px;
+  margin: 50px;
+  background: linear-gradient(to right, rgb(102, 159, 178), lightgreen);
+}
+
+.calc-grid{
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto)repeat(5, 100px);
+}
+
+.calc-grid > button{
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(238, 139, 238, 0.456);
+  border-radius: 10px;
+}
+
+.calc-grid > button:hover{
+  background-color: rgba(255, 255, 255, 0.766);
+}
+
+.extend-two{
+  grid-column: span 2;
+}
+
+.result{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 10px;
+}
+.result .previousOperation{
+  color: rgba(255, 255, 255, 0.713);
+  font-size: 1rem;
+}
+.result .currentOperation{
+  color: white;
+  font-size: 2rem;
+}
